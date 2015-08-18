@@ -13,6 +13,10 @@
 #import "MagnifiterView.h"
 
 
+NSString *const kCTDisplayViewImagePressedNotification = @"CTDisplayViewImagePressedNotification";
+NSString *const kCTDisplayViewLinkPressedNotification  = @"CTDisplayViewLinkPressedNotification";
+
+
 #define ANCHOR_TARGET_TAG 1
 #define FONT_HEIGHT  40
 
@@ -112,7 +116,8 @@ typedef NS_ENUM(NSInteger, CTDisplayViewState) {
                 NSLog(@"hint image");
                 // 在这里处理点击后的逻辑
                 NSDictionary *userInfo = @{ @"imageData": imageData };
-
+                [[NSNotificationCenter defaultCenter] postNotificationName:kCTDisplayViewImagePressedNotification
+                                                                    object:self userInfo:userInfo];
                 return;
             }
         }
@@ -121,7 +126,8 @@ typedef NS_ENUM(NSInteger, CTDisplayViewState) {
         if (linkData) {
             NSLog(@"hint link!");
             NSDictionary *userInfo = @{ @"linkData": linkData };
-
+            [[NSNotificationCenter defaultCenter] postNotificationName:kCTDisplayViewLinkPressedNotification
+                                                                object:self userInfo:userInfo];
             return;
         }
     } else {
