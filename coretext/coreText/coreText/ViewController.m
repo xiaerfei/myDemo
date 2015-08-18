@@ -27,9 +27,9 @@
 //    [mabstring addAttribute:(id)kCTFontAttributeName value:(__bridge id)font range:NSMakeRange(0, 4)];
 //    self.attributeLabel.attributedText = mabstring;
     
-    CTDisplayView *displayView = [[CTDisplayView alloc] initWithFrame:CGRectMake(0, 100, self.view.width, 0)];
+    CTDisplayView *displayView = [[CTDisplayView alloc] initWithFrame:CGRectMake(10, 0, 300, 0)];
     [self.view addSubview:displayView];
-    
+
     
     
     CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];

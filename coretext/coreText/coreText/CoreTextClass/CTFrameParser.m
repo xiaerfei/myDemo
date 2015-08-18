@@ -104,7 +104,7 @@
                     // 创建空白占位符，并且设置它的 CTRunDelegate 信息
                     NSAttributedString *as = [self parseImageDataFromNSDictionary:dict config:config];
                     [result appendAttributedString:as];
-                } else if ([type isEqualToString:@"img"]) {
+                } else if ([type isEqualToString:@"link"]) {
                     NSUInteger startPos = result.length;
                     NSAttributedString *as =
                     [self parseAttributedContentFromNSDictionary:dict
