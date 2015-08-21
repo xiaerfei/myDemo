@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CoreTextData.h"
 
+
+extern NSString *const kCTDisplayViewImagePressedNotification;
+extern NSString *const kCTDisplayViewLinkPressedNotification;
+
 @interface CTDisplayView : UIView <UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) CoreTextData * data;
