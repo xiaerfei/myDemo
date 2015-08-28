@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendRedPaperSelectUser">
+            <connections>
+                <outlet property="tableView" destination="0Ip-5t-ecZ" id="NIR-3q-noR"/>
+                <outlet property="tapGesture" destination="RG2-kG-Zh9" id="Cwc-5c-UWZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Ip-5t-ecZ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Nzt-Cd-n5O"/>
+                        <outlet property="delegate" destination="-1" id="ig2-SK-JOm"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="0Ip-5t-ecZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Szy-Vo-MqF"/>
+                <constraint firstItem="0Ip-5t-ecZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wb9-5Y-rC0"/>
+                <constraint firstAttribute="trailing" secondItem="0Ip-5t-ecZ" secondAttribute="trailing" id="X5J-Hc-sRJ"/>
+                <constraint firstAttribute="bottom" secondItem="0Ip-5t-ecZ" secondAttribute="bottom" id="ZBY-8u-vF3"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="RG2-kG-Zh9" appends="YES" id="vJK-zz-nWX"/>
+            </connections>
+            <point key="canvasLocation" x="470" y="346"/>
+        </view>
+        <tapGestureRecognizer id="RG2-kG-Zh9">
+            <connections>
+                <action selector="tapGestureAction:" destination="-1" id="UU1-hT-kyG"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
