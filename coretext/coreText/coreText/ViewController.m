@@ -28,23 +28,18 @@
 //    [mabstring addAttribute:(id)kCTFontAttributeName value:(__bridge id)font range:NSMakeRange(0, 4)];
 //    self.attributeLabel.attributedText = mabstring;
     
-    DisplayView *view = [[DisplayView alloc] initWithFrame:self.view.frame];
-    view.backgroundColor = [UIColor redColor];
-    [self.view addSubview:view];
+    CTDisplayView *displayView = [[CTDisplayView alloc] initWithFrame:CGRectMake(10,20, [UIScreen mainScreen].bounds.size.width -20, 0)];
+    [self.view addSubview:displayView];
+
     
     
-//    CTDisplayView *displayView = [[CTDisplayView alloc] initWithFrame:CGRectMake(10,20, [UIScreen mainScreen].bounds.size.width -20, 0)];
-//    [self.view addSubview:displayView];
-//
-//    
-//    
-//    CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
-//    config.width = displayView.width;
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"json"];
-//    CoreTextData *data = [CTFrameParser parseTemplateFile:path config:config];
-//    displayView.data = data;
-//    displayView.height = data.height;
-//    displayView.backgroundColor = [UIColor whiteColor];
+    CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
+    config.width = displayView.width;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"json"];
+    CoreTextData *data = [CTFrameParser parseTemplateFile:path config:config];
+    displayView.data = data;
+    displayView.height = data.height;
+    displayView.backgroundColor = [UIColor whiteColor];
 
 }
 

@@ -57,6 +57,7 @@ typedef void(^CompletionBlock)(BOOL operationSuccess, id responseObject, NSStrin
 - (void)insertOrUpdateWithContext:(NSManagedObjectContext *)workContext
 {
     Person *person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:workContext];
+    
     person.name = @"xiaerfei";
     person.age = [NSNumber numberWithInteger:26];
     
