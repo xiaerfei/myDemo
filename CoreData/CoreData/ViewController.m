@@ -48,20 +48,17 @@ typedef void(^CompletionBlock)(BOOL operationSuccess, id responseObject, NSStrin
     
     [NSManagedObjectContext setupCoreDataStackWithStoreNamed:@"CoreData.sqlite"];
 //    Person *person = [Person createEntity];
-//    person.name = @"hahahha";
-//    person.age  = @26;
+//    person.name = @"test5";
+//    person.age  = @25;
 //    
 //    Card *card = [Card createEntity];
-//    card.no = @"982323238102938028402893";
+//    card.no = @"1010104";
 //    person.card = card;
 //    [[NSManagedObjectContext defaultObjectContext] coreDataSaves];
     
-    NSArray *persons = [Person findAll];
+    NSArray *persons = [Person findWhere:@"age" isEqualTo:@23];
     for (Person *person in persons) {
         NSLog(@"name = %@ age = %@ no = %@",person.name,person.age,person.card.no);
-        person.name = @"dlfja;ldfjsdfsdfs";
-        person.age = @25;
-        person.card.no = @"123456789";
     }
     
     [[NSManagedObjectContext defaultObjectContext] coreDataSaves];

@@ -12,6 +12,8 @@
 
 + (NSArray *)findAll;
 + (NSArray *)findAllInContext:(NSManagedObjectContext *)context;
++ (id)findWithPredicate:(NSPredicate *)searchTerm;
++ (id)findWhere:(NSString *)property isEqualTo:(id)value;
 
 
 @end

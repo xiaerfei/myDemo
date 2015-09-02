@@ -21,7 +21,7 @@
  *                                 查询方法                                 *
  ***************************************************************************/
 #pragma mark - 查询方法
-+ (NSArray *)executeFetchRequest:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context
++ (id)executeFetchRequest:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context
 {
     __block NSArray *results = nil;
     [context performBlockAndWait:^{
@@ -53,6 +53,19 @@
 {
     NSFetchRequest *request = [self createFetchRequestInContext:context];
     [request setPredicate:searchTerm];
+    return request;
+}
+
++ (NSFetchRequest *)requestAllWhere:(NSString *)property isEqualTo:(id)value
+{
+    return [self requestAllWhere:property isEqualTo:value inContext:[NSManagedObjectContext contextForCurrentThread]];
+}
+
++ (NSFetchRequest *)requestAllWhere:(NSString *)property isEqualTo:(id)value inContext:(NSManagedObjectContext *)context
+{
+    NSFetchRequest *request = [self createFetchRequestInContext:context];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"%K = %@", property, value]];
+    
     return request;
 }
 
