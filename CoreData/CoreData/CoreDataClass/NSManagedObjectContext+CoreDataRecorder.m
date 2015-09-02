@@ -36,7 +36,6 @@ static NSManagedObjectContext *_defaultObjectContext;
         [self setDefaultObjectContext:defaultContext];
         
         [defaultContext setParentContext:rootContext];
-//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mocDidSaveNotification:) name:NSManagedObjectContextDidSaveNotification object:nil];
     }
 }
 
@@ -74,6 +73,7 @@ static NSManagedObjectContext *_defaultObjectContext;
 {
     if (defaultObjectContext != nil) {
         _defaultObjectContext = defaultObjectContext;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mocDidSaveNotification:) name:NSManagedObjectContextDidSaveNotification object:nil];
     }
 }
 
@@ -122,7 +122,7 @@ static NSManagedObjectContext *_defaultObjectContext;
 }
 
 #pragma mark - contextSave
-- (void)mocDidSaveNotification:(NSNotification *)notification
++ (void)mocDidSaveNotification:(NSNotification *)notification
 {
     NSManagedObjectContext *savedContext = [notification object];
     if (_defaultObjectContext == savedContext) {

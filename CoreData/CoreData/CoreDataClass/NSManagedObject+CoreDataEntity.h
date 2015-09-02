@@ -11,6 +11,13 @@
 @interface NSManagedObject (CoreDataEntity)
 
 
-+ (id)createEntityWithName:(NSString *)entityName;
++ (id)createEntity;
+
++ (NSArray *)executeFetchRequest:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context;
+
+
++ (NSFetchRequest *)createFetchRequestInContext:(NSManagedObjectContext *)context;
++ (NSFetchRequest *)requestAllWithPredicate:(NSPredicate *)searchTerm;
++ (NSFetchRequest *)requestAllWithPredicate:(NSPredicate *)searchTerm inContext:(NSManagedObjectContext *)context;
 
 @end
