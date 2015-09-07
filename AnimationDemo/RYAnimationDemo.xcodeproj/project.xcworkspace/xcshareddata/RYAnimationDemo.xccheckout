@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4C85F9A2-3FF4-4AD3-B4D8-23F2F354B6B6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RYAnimationDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>10a80662-63ff-3141-85e1-f88834ae4652++2097</key>
+		<string>https://192.168.253.9/svn/IOSFinaCustomer/tags/libs</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RYAnimationDemo/RYAnimationDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>10a80662-63ff-3141-85e1-f88834ae4652++2097</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>10a80662-63ff-3141-85e1-f88834ae4652++2097</key>
+		<string>https://192.168.253.9/svn/IOSFinaCustomer</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://192.168.253.9/svn/IOSFinaCustomer/tags/libs/RYAnimationDemo/RYAnimationDemo.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>10a80662-63ff-3141-85e1-f88834ae4652++2097</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>10a80662-63ff-3141-85e1-f88834ae4652++2097</string>
+			<key>IDESourceControlWCCName</key>
+			<string>libs</string>
+		</dict>
+	</array>
+</dict>
+</plist>
