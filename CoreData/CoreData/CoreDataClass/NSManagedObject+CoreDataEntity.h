@@ -23,8 +23,7 @@
 + (NSFetchRequest *)requestAllWhere:(NSString *)property isEqualTo:(id)value inContext:(NSManagedObjectContext *)context;
 
 
-
-
-
+- (BOOL) deleteEntityInContext:(NSManagedObjectContext *)context;
+- (BOOL) deleteEntity;
 
 @end

@@ -78,6 +78,25 @@
     NSString *entityName = [self entityName];
     return [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
 }
+/***************************************************************************
+ *                               Delete Entity                             *
+ ***************************************************************************/
+- (BOOL)deleteEntityInContext:(NSManagedObjectContext *)context
+{
+    NSError *error = nil;
+    NSManagedObject *inContext = [context existingObjectWithID:[self objectID] error:&error];
+    [context deleteObject:inContext];
+    if (error) {
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)deleteEntity
+{
+    return [self deleteEntityInContext:[self managedObjectContext]];
+}
+
 
 
 #pragma mark - other metods

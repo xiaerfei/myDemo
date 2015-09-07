@@ -46,10 +46,6 @@ typedef void(^RootContextSave)(void);
     }
 }
 
-- (void)coreDataSavesAndWait
-{
-    
-}
 
 
 @end
