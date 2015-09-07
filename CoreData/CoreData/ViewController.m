@@ -11,9 +11,7 @@
 #import "Card.h"
 #import "NSManagedObjectContext+GenerateContext.h"
 
-#import "NSManagedObjectContext+CoreDataRecorder.h"
-#import "NSManagedObject+CoreDataEntity.h"
-#import "NSManagedObjectContext+CoreDataSaves.h"
+#import "CoreDataRecorder.h"
 
 typedef void(^RootContextSave)(void);
 typedef void(^CompletionBlock)(BOOL operationSuccess, id responseObject, NSString *errorMessage);
@@ -49,13 +47,20 @@ typedef void(^CompletionBlock)(BOOL operationSuccess, id responseObject, NSStrin
     
     
     [NSManagedObjectContext setupCoreDataStackWithStoreNamed:@"CoreData.sqlite"];
-    Person *person = [NSManagedObject createEntityWithName:@"Person"];
-    person.name = @"hahahha";
-    person.age  = @26;
+//    Person *person = [Person createEntity];
+//    person.name = @"test5";
+//    person.age  = @25;
+//    
+//    Card *card = [Card createEntity];
+//    card.no = @"1010104";   
+//    person.card = card;
+//    [[NSManagedObjectContext defaultObjectContext] coreDataSaves];
     
-    Card *card = [NSManagedObject createEntityWithName:@"Card"];
-    card.no = @"982323238102938028402893";
-    person.card = card;
+    NSArray *persons = [Person findWhere:@"age" isEqualTo:@24];
+    for (Person *person in persons) {
+        NSLog(@"name = %@ age = %@ no = %@",person.name,person.age,person.card.no);
+        [person deleteEntity];
+    }
     
     [[NSManagedObjectContext defaultObjectContext] coreDataSaves];
     

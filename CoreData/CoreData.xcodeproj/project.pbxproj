@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E66BD7C1B96D715007F82C4 /* NSManagedObject+CoreDataFinders.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E66BD7B1B96D715007F82C4 /* NSManagedObject+CoreDataFinders.m */; };
 		4E99838A1B8CAF3A002CCED3 /* NSManagedObjectContext+CoreDataRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9983891B8CAF3A002CCED3 /* NSManagedObjectContext+CoreDataRecorder.m */; };
 		4E99838D1B8CB173002CCED3 /* NSPersistentStoreCoordinator+CoreDataPersistent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E99838C1B8CB173002CCED3 /* NSPersistentStoreCoordinator+CoreDataPersistent.m */; };
 		4E9983901B8CBADA002CCED3 /* NSManagedObjectContext+CoreDataSaves.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E99838F1B8CBADA002CCED3 /* NSManagedObjectContext+CoreDataSaves.m */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E66BD7A1B96D715007F82C4 /* NSManagedObject+CoreDataFinders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+CoreDataFinders.h"; path = "CoreDataClass/NSManagedObject+CoreDataFinders.h"; sourceTree = "<group>"; };
+		4E66BD7B1B96D715007F82C4 /* NSManagedObject+CoreDataFinders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+CoreDataFinders.m"; path = "CoreDataClass/NSManagedObject+CoreDataFinders.m"; sourceTree = "<group>"; };
+		4E66BD7D1B96DC4E007F82C4 /* CoreDataRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CoreDataRecorder.h; path = CoreDataClass/CoreDataRecorder.h; sourceTree = "<group>"; };
 		4E9983881B8CAF3A002CCED3 /* NSManagedObjectContext+CoreDataRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+CoreDataRecorder.h"; path = "CoreDataClass/NSManagedObjectContext+CoreDataRecorder.h"; sourceTree = "<group>"; };
 		4E9983891B8CAF3A002CCED3 /* NSManagedObjectContext+CoreDataRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+CoreDataRecorder.m"; path = "CoreDataClass/NSManagedObjectContext+CoreDataRecorder.m"; sourceTree = "<group>"; };
 		4E99838B1B8CB173002CCED3 /* NSPersistentStoreCoordinator+CoreDataPersistent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSPersistentStoreCoordinator+CoreDataPersistent.h"; path = "CoreDataClass/NSPersistentStoreCoordinator+CoreDataPersistent.h"; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			children = (
 				4EB9F6911B85668A00FCF120 /* CoreDataManager.h */,
 				4EB9F6921B85668A00FCF120 /* CoreDataManager.m */,
+				4E66BD7D1B96DC4E007F82C4 /* CoreDataRecorder.h */,
 				4E9983881B8CAF3A002CCED3 /* NSManagedObjectContext+CoreDataRecorder.h */,
 				4E9983891B8CAF3A002CCED3 /* NSManagedObjectContext+CoreDataRecorder.m */,
 				4E99838B1B8CB173002CCED3 /* NSPersistentStoreCoordinator+CoreDataPersistent.h */,
@@ -178,6 +183,8 @@
 				4E99838F1B8CBADA002CCED3 /* NSManagedObjectContext+CoreDataSaves.m */,
 				4E9983911B8F48AF002CCED3 /* NSManagedObject+CoreDataEntity.h */,
 				4E9983921B8F48AF002CCED3 /* NSManagedObject+CoreDataEntity.m */,
+				4E66BD7A1B96D715007F82C4 /* NSManagedObject+CoreDataFinders.h */,
+				4E66BD7B1B96D715007F82C4 /* NSManagedObject+CoreDataFinders.m */,
 			);
 			name = CoreDataClass;
 			sourceTree = "<group>";
@@ -289,6 +296,7 @@
 				4EB9F6931B85668A00FCF120 /* CoreDataManager.m in Sources */,
 				4EA5D6B61B8422100023C6DF /* Person.m in Sources */,
 				4EA5D6941B841C350023C6DF /* ViewController.m in Sources */,
+				4E66BD7C1B96D715007F82C4 /* NSManagedObject+CoreDataFinders.m in Sources */,
 				4EA5D6BC1B846F130023C6DF /* NSManagedObjectContext+GenerateContext.m in Sources */,
 				4E99838A1B8CAF3A002CCED3 /* NSManagedObjectContext+CoreDataRecorder.m in Sources */,
 				4EA5D6911B841C350023C6DF /* CoreData.xcdatamodeld in Sources */,
