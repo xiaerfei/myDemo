@@ -45,23 +45,24 @@ typedef void(^CompletionBlock)(BOOL operationSuccess, id responseObject, NSStrin
 //        NSLog(@"name = %@ age = %@ no = %@",person.name,person.age,person.card.no);
 //    }
     
-    
+    //初始化
     [NSManagedObjectContext setupCoreDataStackWithStoreNamed:@"CoreData.sqlite"];
-//    Person *person = [Person createEntity];
-//    person.name = @"test5";
-//    person.age  = @25;
-//    
-//    Card *card = [Card createEntity];
-//    card.no = @"1010104";   
-//    person.card = card;
-//    [[NSManagedObjectContext defaultObjectContext] coreDataSaves];
+    // 增加entity
+    Person *person = [Person createEntity];
+    person.name = @"test5";
+    person.age  = @25;
     
+    Card *card = [Card createEntity];
+    card.no = @"1010104";   
+    person.card = card;
+    [[NSManagedObjectContext defaultObjectContext] coreDataSaves];
+    
+    //查询
     NSArray *persons = [Person findWhere:@"age" isEqualTo:@24];
     for (Person *person in persons) {
         NSLog(@"name = %@ age = %@ no = %@",person.name,person.age,person.card.no);
         [person deleteEntity];
     }
-    
     [[NSManagedObjectContext defaultObjectContext] coreDataSaves];
     
     

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>2D4F5F9B-8E3D-4D84-9CE9-62AEEBF9D158</string>
 	<key>IDESourceControlProjectName</key>
-	<string>CoreData</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4ADD7C6B6D24361EAC4476ECAB9D26BDF0D2FD94</key>
 		<string>https://github.com/xiaerfei/myDemo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CoreData/CoreData.xcodeproj</string>
+	<string>CoreData/CoreData.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4ADD7C6B6D24361EAC4476ECAB9D26BDF0D2FD94</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>4ADD7C6B6D24361EAC4476ECAB9D26BDF0D2FD94</string>
 			<key>IDESourceControlWCCName</key>
-			<string>myDemo</string>
+			<string>Demo</string>
 		</dict>
 	</array>
 </dict>
